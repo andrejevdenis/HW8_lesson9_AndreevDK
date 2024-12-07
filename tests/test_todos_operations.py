@@ -20,15 +20,4 @@ def test_complete_todo(browser_management):
     registration_page.submit()
 
     # Проверки
-    submit_form = Assert_results
-
-    submit_form.shuld_have_thanks('Thanks for submitting the form')
-    submit_form.shuld_have_fname_lname('Fedor Lomovoy')
-    submit_form.shuld_have_email('fedyaosminog@ramb.com')
-    submit_form.shuld_have_gender('Other')
-    submit_form.shuld_have_mobile_num('1000000000')
-    submit_form.shuld_have_birth_date('23 October,2000')
-    submit_form.shuld_have_subject('Maths, Computer Science')
-    submit_form.file_name('Octopus.jpg')
-    submit_form.adress('Moscow, Bulkina 65-39')
-    submit_form.sname_cname('Haryana Panipat')
+    Assert_results.in_submit_form()
