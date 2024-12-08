@@ -1,5 +1,5 @@
-from resources.resources import RegistrationPage
-from resources.assert_res import Assert_results
+from Pages.resources import RegistrationPage
+from Pages.assert_res import Assert_results
 
 def test_complete_todo(browser_management):
     # Шаги выполнения
@@ -12,8 +12,8 @@ def test_complete_todo(browser_management):
     registration_page.fill_mobile_num('1000000000')
     registration_page.fill_date_of_birth('9', '2000', '23')
     registration_page.add_subject('Maths').add_subject('Computer Science') #Для добавления дополнительного субъекта продолжить добавлене класса ".add_subject", наименование указывать полностью, регистр важен
-    registration_page.check_hobbies('y', 'n', 'y') # 'y' или 'n' по желаемому хобби
-    registration_page.add_file("../tests/Octopus.jpg")
+    registration_page.check_hobbies(Sports='y', Reading='n', Music='y') # 'y' или 'n' по желаемому хобби
+    registration_page.add_file("Octopus.jpg")
     registration_page.fill_adress('Moscow, Bulkina 65-39')
     registration_page.choose_state('Haryana')
     registration_page.choose_city('Panipat')

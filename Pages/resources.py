@@ -47,20 +47,14 @@ class RegistrationPage:
     def check_hobbies(cls, Sports, Reading, Music):
         if Sports == 'y':
             browser.element('[for="hobbies-checkbox-1"]').click()
-        else:
-            pass
         if Reading == 'y':
             browser.element('[for="hobbies-checkbox-2"]').click()
-        else:
-            pass
         if Music == 'y':
             browser.element('[for="hobbies-checkbox-3"]').click()
-        else:
-            pass
 
     @classmethod
     def add_file(cls, param):
-        browser.element('[id="uploadPicture"]').set_value(os.path.abspath(param))
+        browser.element('[id="uploadPicture"]').set_value(os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), f'resources/{param}')))
 
     @classmethod
     def fill_adress(cls, param):
